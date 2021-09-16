@@ -1,5 +1,5 @@
 print('1: Describe what is happening below by adding comments before each line')
-# the below boxes are being assigned a value
+# boxes 1-4 are being assigned a value
 box_1 = 'books'
 box_2 = 'clothes'
 box_3 = 'plants'
