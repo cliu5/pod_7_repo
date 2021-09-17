@@ -1,5 +1,5 @@
 print('1: Describe what is happening below by adding comments before each line')
-# the below boxes are being assigned a value
+# boxes 1-4 are being assigned a value
 box_1 = 'books'
 box_2 = 'clothes'
 box_3 = 'plants'
@@ -21,7 +21,7 @@ print (address)
 
 print('4: Reassign variables box_2 and box_4 with some other text and print box_1, box_2, box_3, box_4 again')
 box_2 = 'computer'
-box_4 = 'mouse'
+box_4 = 'keyboard'
 
 print(box_1)
 print(box_2)
