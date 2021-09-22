@@ -1,1 +1,2 @@
-## test student readme
+# kevins challenges
+* updating readme for practice
