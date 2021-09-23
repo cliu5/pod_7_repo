@@ -10,6 +10,7 @@ box_3 = 'plants'
 box_4 = 'kitchen stuff'
 
 print(box_1)
+
 print(box_2)
 print(box_3)
 print(box_4)
