@@ -10,6 +10,7 @@ box_3 = 'plants'
 box_4 = 'kitchen stuff'
 
 print(box_1)
+
 print(box_2)
 print(box_3)
 print(box_4)
@@ -54,7 +55,7 @@ print ('5.1: The line of code below is commented out because it produces many Sy
 box_1 = 'Completed the first Python Challenge!'
 print(box_1)
 
-print(5.2: Turn the comment below back into regular Python code')
+print('5.2: Turn the comment below back into regular Python code')
 
 box_1 = 'Hello World!'
 box_2 = 'completion_message'
