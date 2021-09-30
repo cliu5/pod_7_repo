@@ -41,10 +41,6 @@ emails = []
 # 2.1 TODO: Use a "for" loop to go over each name in the names list
 
 for index in range(len(names)):
-   
-   # print(joined_names)
-    email = joined_names+'@ripplemedia.com'
-   #print(email)
 
 # 2.2 TODO: Inside the "for" loop, create the email id by re-using the logic from Question 1 and...
 
