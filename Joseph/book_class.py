@@ -17,4 +17,8 @@ class Booklist():
                 self.books.remove(book)
 
     def display_titles(self):
-        return sorted(self.books, key=lambda x: x['title'])
+        results = []
+        sorted_list = sorted(self.books, key=lambda x: x['title'])
+        for dict in sorted_list:
+            results.append(dict['title'])
+        return results
