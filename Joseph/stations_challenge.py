@@ -103,6 +103,10 @@ routes: ['Boston', 'DC', 'Philly']
 bus_station_1 = BusStation(station_name='NYC Megabus Stop',
                            location='34th street and 12th avenue', routes=['Boston', 'DC', 'Philly'])
 bus_station_1.show_info()
+bus_station_1.close_station()
+bus_station_1.show_info()
+bus_station_1.open_station()
+bus_station_1.show_info()
 
 print('Question 5: Importing your classes')
 
