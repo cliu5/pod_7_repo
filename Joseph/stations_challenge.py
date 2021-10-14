@@ -31,11 +31,17 @@ class Station:
 
 
 class SubwayStation(Station):
-    def __init__(self, lines=[]):
+    def __init__(self, station_name, location, lines=list):
+        super().__init__(station_name, location)
         self.lines = lines
+
+    def show_info(self):
+        print(
+            f'Lines {self.lines} stop at {self.station_name} station and is located at {self.location}.')
 
 
 print('Question 2: Make an example subway station')
+
 '''
 Using your SubwayStation class, instantiate a subway station with the info below. 
 Then run the show_info() method to make sure you get the station_name, location, and lines printed out
@@ -44,6 +50,9 @@ station_name: '14th street'
 location: '14th street and 7th avenue'
 lines: ['1', '2', '3', 'L']
 '''
+subway_1 = SubwayStation(station_name='14th street',
+                         location='14th street and 7th avenue', lines=['1', '2', '3', 'L'])
+subway_1.show_info()
 
 
 print('Question 3: Making the BusStation Class')
@@ -60,6 +69,26 @@ BusStation should:
 '''
 
 
+class BusStation(Station):
+    def __init__(self, station_name, location, routes=list, open=True):
+        super().__init__(station_name, location)
+        self.routes = routes
+        self.open = open
+
+    def open_station(self):
+        self.open = True
+
+    def close_station(self):
+        self.open = False
+
+    def show_info(self):
+        if self.open:
+            print(
+                f'Routes {self.routes} stop at {self.station_name} station and is located at {self.location}.')
+        else:
+            print(f'{self.station_name} station is closed at {self.location}')
+
+
 print('Question 4: Make an example bus station')
 '''
 Using your BusStation class, instantiate a bus station with the info below. 
@@ -69,8 +98,11 @@ Then, demonstrate that you can close and open the bus station
 
 station_name: 'NYC Megabus Stop'
 location: '34th street and 12th avenue'
-lines: ['Boston', 'DC', 'Philly']
+routes: ['Boston', 'DC', 'Philly']
 '''
+bus_station_1 = BusStation(station_name='NYC Megabus Stop',
+                           location='34th street and 12th avenue', routes=['Boston', 'DC', 'Philly'])
+bus_station_1.show_info()
 
 print('Question 5: Importing your classes')
 
