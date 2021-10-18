@@ -10,7 +10,7 @@ Since subways and buses have different information, the methods and attributes w
 '''
 
 
-print('Question 1: Making the SubwayStation Class')
+# print('Question 1: Making the SubwayStation Class')
 '''
 Using the Station class below as the parent, make a child class called SubwayStation
 
@@ -37,10 +37,10 @@ class SubwayStation(Station):
 
     def show_info(self):
         print(
-            f'Lines {self.lines} stop at {self.station_name} station and is located at {self.location}.')
+            f'Lines {", ".join(self.lines)} stop at {self.station_name} station and is located at {self.location}.')
 
 
-print('Question 2: Make an example subway station')
+# print('Question 2: Make an example subway station')
 
 '''
 Using your SubwayStation class, instantiate a subway station with the info below. 
@@ -52,10 +52,10 @@ lines: ['1', '2', '3', 'L']
 '''
 subway_1 = SubwayStation(station_name='14th street',
                          location='14th street and 7th avenue', lines=['1', '2', '3', 'L'])
-subway_1.show_info()
+# subway_1.show_info()
 
 
-print('Question 3: Making the BusStation Class')
+# print('Question 3: Making the BusStation Class')
 
 '''
 Using the Station class below as the parent, make a child class called BusStation
@@ -84,12 +84,12 @@ class BusStation(Station):
     def show_info(self):
         if self.open:
             print(
-                f'Routes {self.routes} stop at {self.station_name} station and is located at {self.location}.')
+                f'Routes {", ".join(self.routes)} stop at {self.station_name} station and is located at {self.location}.')
         else:
             print(f'{self.station_name} station is closed at {self.location}')
 
 
-print('Question 4: Make an example bus station')
+# print('Question 4: Make an example bus station')
 '''
 Using your BusStation class, instantiate a bus station with the info below. 
 Then, run the show_info() method to make sure you get the station_name, location, routes, and whether the station is open printed out
@@ -102,13 +102,13 @@ routes: ['Boston', 'DC', 'Philly']
 '''
 bus_station_1 = BusStation(station_name='NYC Megabus Stop',
                            location='34th street and 12th avenue', routes=['Boston', 'DC', 'Philly'])
-bus_station_1.show_info()
-bus_station_1.close_station()
-bus_station_1.show_info()
-bus_station_1.open_station()
-bus_station_1.show_info()
+# bus_station_1.show_info()
+# bus_station_1.close_station()
+# bus_station_1.show_info()
+# bus_station_1.open_station()
+# bus_station_1.show_info()
 
-print('Question 5: Importing your classes')
+# print('Question 5: Importing your classes')
 
 '''
 Now, it's time to design a few more stations of your own in another script! 

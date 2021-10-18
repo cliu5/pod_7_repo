@@ -1,4 +1,5 @@
 from stations_challenge import Station, BusStation, SubwayStation
+# Why are the print statements from the stations_challenge file imported and run as well?
 '''
 Now, it's time to design a few more stations of your own in another script! 
 
