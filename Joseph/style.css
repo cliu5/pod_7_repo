@@ -1,0 +1,34 @@
+/* TODO: Make your main heading centered on the page */
+h1 {
+  text-align: center;
+}
+/* TODO: Using a class, make all paragraph text AND your list of facts about you in the font Verdana */
+.verdana {
+  font-family: Verdana, arial, helvetica, sans-serif;
+}
+/* TODO: Using another class, make all paragraph text any color other than black */
+.blue {
+  color: blue;
+}
+/* TODO: Using element IDs, make each of the 3 facts about you (in your list) a different color. Make only 1 of the facts written in italics. */
+#red {
+  color: red;
+}
+#orange {
+  color: orange;
+}
+#yellow {
+  color: yellow;
+  font-style: italic;
+}
+/* TODO: Make the labels of the form bold */
+label {
+  font-weight: bold;
+}
+/* TODO: BONUS: Align the images at the center of the page */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
