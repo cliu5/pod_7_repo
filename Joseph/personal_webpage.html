@@ -62,26 +62,32 @@
         <input type="text" name="name" id="name" placeholder="Jon Doe" />
         <label for="age">Age:</label>
         <input type="number" name="age" id="age" placeholder="18" />
+        <!-- TODO: BONUS: Add a "multiple-choice" item to your form. Hint: you may want to look up how to add "HTML radio button" -->
+        <div>
+          <p class="verdana blue">Select a car:</p>
+
+          <div>
+            <input
+              type="radio"
+              id="charger"
+              name="car"
+              value="charger"
+              checked
+            />
+            <label for="charger">Charger</label>
+          </div>
+
+          <div>
+            <input type="radio" id="challenger" name="car" value="challenger" />
+            <label for="challenger">Challenger</label>
+          </div>
+
+          <div>
+            <input type="radio" id="demon" name="car" value="demon" />
+            <label for="demon">Demon</label>
+          </div>
+        </div>
       </form>
-    </div>
-    <!-- TODO: BONUS: Add a "multiple-choice" item to your form. Hint: you may want to look up how to add "HTML radio button" -->
-    <div>
-      <p class="verdana blue">Select a car:</p>
-
-      <div>
-        <input type="radio" id="charger" name="car" value="charger" checked />
-        <label for="charger">Charger</label>
-      </div>
-
-      <div>
-        <input type="radio" id="challenger" name="car" value="challenger" />
-        <label for="challenger">Challenger</label>
-      </div>
-
-      <div>
-        <input type="radio" id="demon" name="car" value="demon" />
-        <label for="demon">Demon</label>
-      </div>
     </div>
   </body>
 </html>
