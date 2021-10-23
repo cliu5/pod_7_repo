@@ -1,0 +1,15 @@
+<h1>Sandwich Homepage</h1>
+
+<h3>Ingredients List</h3>
+
+<ul>
+  {% for ingredient in ingredients %}
+  <li>
+    <a href="{% url 'ingredients_list' ingredient %}">{{ ingredient }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<form action="/sandwich/random">
+  <button type="submit">Make a random sandwich!</button>
+</form>
