@@ -23,8 +23,12 @@ Finally, print the books attribute of my_library -- it should be an empty list
 Also, print out the type of my_library to see what you get :) 
 '''
 
-print('books[]')
+# ('books[]')
 print('PART 1\n')
+my_library = Booklist()
+print(my_library.books)
+print(type(my_library))
+print()
 
 
 '''
@@ -43,20 +47,16 @@ The New Jim Crow - Michelle Alexander
 The Truths We Hold - Kamala Harris
 My Grandmother's Hands - Resmaa Menakem
 
-my_library = 
+
 Finally, print the books attribute of my_library to make sure your books have been added!
 '''
+print('\nPart 2\n')
+my_library.add(title='Just Mercy', author='Bryn Stevenson')
+my_library.add(title='The New Jim Crow', author='Michelle Alexander')
+my_library.add(title='The Truths We Hold', author='Kamala Harris')
+my_library.add(title='My Grandmother/s Hands', author='Resmaa Menakem')
 
-
-my_library = books.add('Just Mercy', 'Bryn Stevenson')
-my_library = books.add('The New Jim Crow', 'Michelle Alexander')
-my_library = books.add('The Truths We Hold', 'Kamala Harris')
-my_library = books.add('My Grandmother/s Hands', 'Resmaa Menakem')
-
-print(my_library)
-
-
-#print('\nPart 2\n')
+print(my_library.books)
 
 
 # '''
@@ -68,7 +68,7 @@ print(my_library)
 # Once you have finished the method, count the books in my_library and print out the result
 # '''
 print('\nPart 3\n')
-#print (my_library.count_books)
+print(my_library.count_books())
 
 
 # '''
@@ -83,7 +83,8 @@ print('\nPart 3\n')
 # '''
 
 print('\nPart 4\n')
-
+my_library.remove_title('Just Mercy')
+print(my_library.books)
 
 # '''
 # Part #5:
@@ -98,7 +99,7 @@ print('\nPart 5\n')
 nyt_bestsellers = Booklist()
 nyt_bestsellers.add('The Wish', 'Nicholas Sparks')
 nyt_bestsellers.add('Peril', 'Bob Woodward')
-print(nyt_bestsellers)
+print(nyt_bestsellers.books)
 
 # '''
 # BONUS Part #6:
@@ -113,5 +114,5 @@ print(nyt_bestsellers)
 
 
 print('\nBONUS Part 6\n')
-print(my_library.display_titles())
-print(nyt_bestseller.display_titles())
+print(my_library.books)
+print(nyt_bestsellers.books)
