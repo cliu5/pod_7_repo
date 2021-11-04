@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp.apps.MyappConfig',
     'sandwich.apps.SandwichConfig',
+    'todo.apps.TodoConfig',
 ]
 
 MIDDLEWARE = [
