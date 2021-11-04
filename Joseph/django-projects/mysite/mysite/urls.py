@@ -22,6 +22,8 @@ urlpatterns = [
     path('myapp/', include('myapp.urls')),
     # URL's for sandwich project.
     path('sandwich/', include('sandwich.urls')),
-    # URL's for Todo project.
+    # URL's for todo project.
     path('todo/', include('todo.urls')),
+    # URL's for blog project.
+    path('blog/', include('blog.urls')),
 ]
