@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'myapp.apps.MyappConfig',
     'sandwich.apps.SandwichConfig',
     'todo.apps.TodoConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
