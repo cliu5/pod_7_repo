@@ -1,11 +1,11 @@
 from django.urls import path
-from myapp.views import hello
-from myapp.views import goodbye
+from myapp.views import hello, goodbye
 
 urlpatterns = [
-    path('', goodbye, name='goodbye'),
     # myapp/
     path('', hello, name='hello'),
-    # myapp/<str:name>
-    path('<str:name>', hello, name='hello_name')
+    #myapp/<str:name>
+    path('<str:name>', hello, name='hello_name'),
+    #myapp/goodbye/Django
+    path('goodbye/<str:name>', goodbye, name='goodbye_name'),
 ]
