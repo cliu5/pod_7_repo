@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from .forms import TodoForm
-from .models import TodoList
+from .forms import TodoForm, NoteForm
+from .models import TodoList, NoteList
 
 # Create your views here.
 
@@ -36,6 +36,25 @@ def task(request, task_id):
             if form.is_valid():
                 task = form.cleaned_data['task']
                 TodoList.objects.filter(pk=task_id).update(task=task)
+        elif 'completed' in request.POST:
+            form = TodoForm(request.POST)
+            if form.is_valid():
+                TodoList.objects.filter(pk=task_id).update(completed=True)
         elif 'delete' in request.POST:
             TodoList.objects.filter(pk=task_id).delete()
         return HttpResponseRedirect(reverse('todo'))
+
+
+def notes(request):
+    if request.method == 'GET':
+        notes = NoteList.objects.all().order_by('note_id')
+        form = NoteForm()
+        return render(request=request, template_name='notes.html', context={'notes': notes, 'form': form})
+
+    if request.method == 'POST':
+        form = NoteForm(request.POST)
+        if form.is_valid():
+            note = form.cleaned_data['note']
+            # add new note to NoteList database
+            NoteList.objects.create(note_text=note)
+        return HttpResponseRedirect(reverse('notes'))
