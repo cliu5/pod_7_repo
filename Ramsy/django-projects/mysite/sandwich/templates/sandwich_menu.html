@@ -1,0 +1,19 @@
+<h1>Sandwich Menu</h1>
+
+<ol>
+  {% for sandwich in menu %}
+  <li>{{ sandwich|title }}</li>
+  {% endfor %}
+</ol>
+
+<form action='/sandwich'>
+  <input type='submit' value='Return to Sandwich Homepage' />
+</form>
+
+<!-- 
+Another way of making a hyperlink
+
+<form action="/sandwich">
+  <button type="submit">Return to Sandwich Homepage</button>
+</form>
+ -->

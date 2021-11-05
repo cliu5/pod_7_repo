@@ -1,0 +1,11 @@
+<h1>{{ ingredient_type|title }}</h1>
+
+<ul>
+    {% for ingredient in ingredients %}
+    <li>{{ ingredient }}</li>
+    {% endfor %}
+</ul>
+
+<form action="{% url 'sandwich' %}">
+    <input type="submit" value="Return to Sandwich Home" />
+</form>
