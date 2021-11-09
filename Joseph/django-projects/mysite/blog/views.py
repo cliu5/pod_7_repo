@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from .models import Post
+from .models import Post, Tag
 from .forms import EditorForm
 
 # Create your views here.
@@ -64,18 +64,17 @@ def create(request):
         form = EditorForm(request.POST)
         # validate form
         if form.is_valid():
-            # if form was submitted by clicking Save
+            # if form was submitted by clicking Create
             if 'create' in request.POST:
                 # get cleaned data from form
                 title = form.cleaned_data['title']
                 img_link = form.cleaned_data['img_link']
                 body = form.cleaned_data['body']
                 tags = form.cleaned_data['tags']
-                # filter QuerySet object by post_id
-                posts = Post.objects.filter(pk=post_id)
-                # update QuerySet object with cleaned title, body, img_link
-                posts.update(title=title, body=body, img_link=img_link)
+                # Save new post to database.
+                post = Post.objects.update_or_create(title=title, body=body,
+                                                     img_link=img_link)
                 # set cleaned tags to ManyRelatedManager object
-                posts[0].tags.set(tags)
+                post[0].tags.set(tags)
         # redirect to 'blog/'
         return HttpResponseRedirect(reverse('blog'))
