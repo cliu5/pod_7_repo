@@ -14,3 +14,10 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
     tags = models.ManyToManyField(Tag)
+
+
+class Comment(models.Model):
+    comment_id = models.AutoField(primary_key=True)
+    comment = models.CharField(max_length=255)
+    post = models.ForeignKey(
+        Post, blank=True, null=True, on_delete=models.CASCADE)
